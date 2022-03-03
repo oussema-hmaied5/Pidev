@@ -1,0 +1,33 @@
+<table>
+    <h4>la liste des reclamations</h4>
+    <!--<input type="text" name="find" class="form-horizontal style-forms" name="find"><input type="submit" value="search">-->
+    <hr>
+    <thead>
+    <tr>
+        <th>service</th>
+        <th>adresse</th>
+        <th>num</th>
+        <th>sujet</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for r in reclamation %}
+        <tr>
+
+            <td>
+                {{ r.service }}
+            </td>
+            <td>
+                {{ r.num }}
+            </td>
+            <td>
+                {{ r.mail }}
+            </td>
+            <td>
+                {{ r.sujet }}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
